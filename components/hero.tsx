@@ -1,3 +1,4 @@
+"use client"
 import { ArrowRight, PackageSearch, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -22,17 +23,13 @@ export function Hero() {
             moderno de control de productos, existencias y ventas.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg">
-              <a href="#productos">
-                Ver productos
-                <ArrowRight className="h-4 w-4" />
-              </a>
+            <Button size="lg" onClick={() => (window.location.href = "#productos") }>
+              Ver productos
+              <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <a href="#inventario">
-                <PackageSearch className="h-4 w-4" />
-                Sistema de inventario
-              </a>
+            <Button size="lg" variant="outline" onClick={() => (window.location.href = "#inventario") }>
+              <PackageSearch className="h-4 w-4" />
+              Sistema de inventario
             </Button>
           </div>
         </div>

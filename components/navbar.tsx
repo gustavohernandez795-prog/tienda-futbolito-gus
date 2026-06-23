@@ -44,9 +44,7 @@ export function Navbar() {
         </ul>
 
         <div className="hidden lg:block">
-          <Button asChild>
-            <a href="#contacto">Solicitar productos</a>
-          </Button>
+          <Button onClick={() => (location.href = '#contacto')}>Solicitar productos</Button>
         </div>
 
         <button
@@ -75,10 +73,11 @@ export function Navbar() {
               </li>
             ))}
             <li className="px-1 py-2">
-              <Button asChild className="w-full">
-                <a href="#contacto" onClick={() => setOpen(false)}>
-                  Solicitar productos
-                </a>
+              <Button className="w-full" onClick={() => {
+                setOpen(false)
+                location.href = '#contacto'
+              }}>
+                Solicitar productos
               </Button>
             </li>
           </ul>
